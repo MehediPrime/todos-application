@@ -8,10 +8,13 @@ import {
 } from "./apiMethod/apiMethod";
 
 //React Query - GET
-export const useGetTodos = () => {
+export const useGetTodos = ({ params }) => {
   return useQuery({
     queryKey: ["todos"],
-    queryFn: () => getMethod({ url: `/todos/` }),
+    queryFn: () =>
+      getMethod({
+        url: `/todos${params}`,
+      }),
   });
 };
 

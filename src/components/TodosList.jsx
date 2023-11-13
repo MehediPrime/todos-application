@@ -18,7 +18,7 @@ const TodosList = ({ data }) => {
       <div className="mt-4 flex flex-col gap-2" key={field.id}>
         <div
           className={`flex justify-between bg-${
-            field?.status === 0 ? "red" : "emerald"
+            field?.status === 0 ? "red-500" : "emerald"
           }-300/25 px-2 py-1`}
         >
           <div className="flex gap-2">
